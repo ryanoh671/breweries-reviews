@@ -17,3 +17,12 @@ a {
 .login img {
   height: 30px;
 }
+
+#user-avatar {
+  width: 30px;
+  border-radius: 15px;
+}
+
+nav {
+  float: right;
+}
