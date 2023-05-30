@@ -4,5 +4,7 @@ const Schema = mongoose.Schema;
 
 const brewerySchema = new Schema({
     brewery: { type: String, required: true },
-    location: String
-})
+    location: { type: String, required: true }
+});
+
+module.exports = mongoose.model('Brewery', brewerySchema);
