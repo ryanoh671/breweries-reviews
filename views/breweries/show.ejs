@@ -1,11 +1,53 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <div>Brewery: </div>
+    <div>Brewery Name: </div>
     <div><%= brewery.name %></div>
-    <div>Location: </div>
-    <div>asdf</div>
-  </section>
+    <div>City, State: </div>
+    <div><%= brewery.location %></div>
+    <div>Dog Friendly?: </div>
+    <div><%= brewery.dogFriendly %></div>
+    <div>Ambience: </div>
+    <div><%= brewery.ambience %></div>
+</section>
+<section>
+    <h2>Reviews</h2>
+    <form id="add-review-form" method="POST" action="/breweries/<%= brewery._id%>/reviews">
+        <label>Review:</label>
+        <textarea name="content"></textarea>
+        <label>Rating:</label>
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+        </select>
+        <input type="submit" value="Add Review">
+        
+    </form>
+    <% if(brewery.reviews.length) { %>
+        <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Date</th>
+                <th>Review</th>
+                <th>Rating</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <% brewery.reviews.forEach(function(r) { %>
+                <tr>
+                    <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+                    <td><%= r.content %></td>
+                    <td><%= r.rating %></td>
+                </tr>
+            <% }) %>
+            <% } %>
+            </tbody>
+</section>
 
 
 
