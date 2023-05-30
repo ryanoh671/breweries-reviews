@@ -3,7 +3,8 @@ const Brewery = require('../models/brewery');
 module.exports = {
     index, 
     new: newBrewery,
-    create
+    create, 
+    show
 };
 
 function index(req, res) {
@@ -24,6 +25,6 @@ async function create(req, res) {
         res.render('breweries/new', { errorMsg: err.message });
     }
 }
-// async function show(req, res) {
-//     res.render('breweries/show', {title: 'Brewery Detail'});
-// }
+async function show(req, res) {
+    res.render('breweries/show', {title: 'Brewery Detail'});
+}

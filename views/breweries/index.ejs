@@ -2,4 +2,25 @@
   
 <h1>Breweries Page</h1>
 
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Brewery</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% breweries.forEach(function(brewery) { %>
+        <tr>
+          <td><%= brewery.name %></td>
+          <td><%= brewery.location %></td>
+          <td><a href="/breweries/<%= brewery._id %>">DETAILS</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+
+
 <%- include('../partials/footer') %>

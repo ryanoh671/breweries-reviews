@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const brewerySchema = new Schema({
-    brewery: { type: String, required: true },
+    name: { type: String, required: true },
     location: { type: String, required: true }
 });
 

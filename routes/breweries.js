@@ -13,6 +13,6 @@ router.get('/new', breweriesCtrl.new);
 router.post('/', breweriesCtrl.create);
 
 // GET /movies/:id 
-// router.get('/:id', breweriesCtrl.show);
+router.get('/:id', breweriesCtrl.show);
 
 module.exports = router;
