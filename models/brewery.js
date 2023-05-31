@@ -20,6 +20,8 @@ const reviewSchema = new Schema({
     },
     userName: String,
     userAvatar: String
+}, {
+    timestamps: true,
 });
 
 const brewerySchema = new Schema({
@@ -37,6 +39,8 @@ const brewerySchema = new Schema({
     },
     reviews: [reviewSchema],
     user: { type: Schema.Types.ObjectId, ref: 'User'}
+}, {
+    timestamps: true,
 });
 
 module.exports = mongoose.model('Brewery', brewerySchema);

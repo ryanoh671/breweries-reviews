@@ -34,6 +34,7 @@
                 <th>Date</th>
                 <th>Review</th>
                 <th>Rating</th>
+                <th>Actions</th>
                 <th></th>
               </tr>
             </thead>
@@ -41,8 +42,14 @@
                 <% brewery.reviews.forEach(function(r) { %>
                 <tr>
                     <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+                    <td><%= r.createdAt.toLocaleDateString() %></td>
                     <td><%= r.content %></td>
                     <td><%= r.rating %></td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="/reviews/edit>">Edit</a>
+                        </div>
+                    </td>
                 </tr>
             <% }) %>
             <% } %>

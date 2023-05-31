@@ -3,16 +3,16 @@ var router = express.Router();
 var breweriesCtrl = require('../controllers/breweries');
 // const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// GET /movies
+// GET /breweries
 router.get('/', breweriesCtrl.index);
 
-// GET /movies/new
+// GET /breweries/new
 router.get('/new', breweriesCtrl.new);
 
-// POST /movies
+// POST /breweries
 router.post('/', breweriesCtrl.create);
 
-// GET /movies/:id 
+// GET /breweries/:id 
 router.get('/:id', breweriesCtrl.show);
 
 module.exports = router;
