@@ -47,7 +47,9 @@
                     <td><%= r.rating %></td>
                     <td>
                         <div class="btn-group">
-                            <a href="/reviews/edit>">Edit</a>
+                            <% if (user?._id.equals(r.user)) { %>
+                            <a href="/reviews/<%= r._id%>/edit">Edit</a>
+                            <% } %>
                         </div>
                     </td>
                 </tr>
