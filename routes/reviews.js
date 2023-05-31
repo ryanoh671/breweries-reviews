@@ -9,6 +9,7 @@ router.post('/breweries/:id/reviews', reviewsCtrl.create);
 // GET /reviews/:id/edit
 router.get('/reviews/:id/edit', reviewsCtrl.edit);
 
-// GET /breweries/:id/reviews/:id
+// GET /reviews/:id
+router.put('reviews/:id', reviewsCtrl.update);
 
 module.exports = router;
