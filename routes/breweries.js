@@ -15,4 +15,7 @@ router.post('/', breweriesCtrl.create);
 // GET /breweries/:id 
 router.get('/:id', breweriesCtrl.show);
 
+// DELETE /breweries/:id
+router.delete('/:id', breweriesCtrl.delete);
+
 module.exports = router;

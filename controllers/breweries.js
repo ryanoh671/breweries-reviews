@@ -4,7 +4,8 @@ module.exports = {
     index, 
     new: newBrewery,
     create, 
-    show
+    show, 
+    delete: deleteBrewery
 };
 
 async function index(req, res) {
@@ -18,7 +19,10 @@ function newBrewery(req, res) {
 }
 
 async function create(req, res) {
+
     req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
     try {
         const brewery = await Brewery.create(req.body);
         
@@ -34,3 +38,10 @@ async function show(req, res) {
     res.render('breweries/show', { title: 'Brewery Detail', brewery });
 }
 
+async function deleteBrewery(req, res) {
+    const brewery = await Brewery.findOne({'brewery._id' : req.params.id, 'brewery.user' : req.user._id});
+    if (!brewery) return res.redirect(`/breweries/${brewery._id}`);
+    brewery.remove(req.params.id);
+    await brewery.save();
+    res.redirect(`/breweries`);
+}

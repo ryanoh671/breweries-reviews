@@ -38,7 +38,9 @@ const brewerySchema = new Schema({
         required: true
     },
     reviews: [reviewSchema],
-    user: { type: Schema.Types.ObjectId, ref: 'User'}
+    user: { type: Schema.Types.ObjectId, ref: 'User'},
+    userName: String,
+    userAvatar: String
 }, {
     timestamps: true,
 });

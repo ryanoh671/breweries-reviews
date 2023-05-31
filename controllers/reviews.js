@@ -35,11 +35,12 @@ async function update(req, res) {
 
     if (!reviewSubdoc.user.equals(req.user._id)) return res.redirect(`/breweries/${brewery._id}`);
     reviewSubdoc.content = req.body.content;
+    reviewSubdoc.rating = req.body.rating;
     try {
         await brewery.save();
     } catch (e) {
         console.log(e.message);
     }
 
-    res.redirect(`breweries/${brewery._id}`);
+    res.redirect(`/breweries/${brewery._id}`);
 }

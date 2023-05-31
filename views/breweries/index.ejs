@@ -13,13 +13,22 @@
     <tbody>
       <% breweries.forEach(function(brewery) { %>
         <tr>
+          <td class="brewery-user"><img alt="avatar" src="<%= brewery.userAvatar %>" referrerpolicy="no-referrer" ><%= brewery.userName %></td>
           <td><%= brewery.name %></td>
           <td><%= brewery.location %></td>
           <td><a href="/breweries/<%= brewery._id %>">DETAILS</a></td>
+          <td>
+            <% if (user && brewery.user.equals(user._id)) { %>
+            <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
+              <button type="submit">x</button>
+            </form>
+            <% } %>
+          </td>
         </tr>
         <% }); %>
       </tbody>
     </table>
+    
     
 
 
