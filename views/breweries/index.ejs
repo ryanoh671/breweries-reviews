@@ -1,26 +1,25 @@
 <%- include('../partials/header') %>
   
-<h1>Breweries Page</h1>
-
-
 <table id="list">
     <thead>
       <tr>
-        <th>Brewery</th>
-        <th>Location</th>
+        <th class="table-headers">User</th>
+        <th class="table-headers">Brewery</th>
+        <th class="table-headers">City, State</th>
       </tr>
     </thead>
     <tbody>
       <% breweries.forEach(function(brewery) { %>
         <tr>
-          <td class="brewery-user"><img alt="avatar" src="<%= brewery.userAvatar %>" referrerpolicy="no-referrer" ><%= brewery.userName %></td>
+          <td class="brewery-user"><img alt="avatar" src="<%= brewery.userAvatar %>" referrerpolicy="no-referrer" >&nbsp;<%= brewery.userName %></td>
           <td><%= brewery.name %></td>
           <td><%= brewery.location %></td>
           <td><a href="/breweries/<%= brewery._id %>">DETAILS</a></td>
+          <td><a href="/checkins/new">Check-In</a></td>
           <td>
             <% if (user && brewery.user.equals(user._id)) { %>
             <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">
-              <button type="submit">x</button>
+              <button type="submit" id="remove">Remove Brewery</button>
             </form>
             <% } %>
           </td>

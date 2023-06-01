@@ -35,7 +35,7 @@ async function create(req, res) {
 async function show(req, res) {
     // find the brewery to show details of (req.params.id)
     const brewery = await Brewery.findById(req.params.id);
-    res.render('breweries/show', { title: 'Brewery Detail', brewery });
+    res.render('breweries/show', { title: 'Brewery Details', brewery });
 }
 
 async function deleteBrewery(req, res) {

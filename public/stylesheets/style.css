@@ -1,10 +1,13 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://i.imgur.com/lC8YBpL.png");
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(76, 104, 187);
 }
 
 .login {
@@ -14,15 +17,84 @@ a {
   height: 34px;
 }
 
-.login img {
+img {
   height: 30px;
+  border-radius: 15px;
+
 }
 
-#user-avatar {
-  width: 30px;
-  border-radius: 15px;
+.table-headers {
+  padding: 20px;
 }
+
+.brewery-user {
+  display: flex;
+}
+
+/* #user-avatar {
+  width: 30px; */
+/* } */
 
 nav {
-  float: right;
+  background-color: rgba(231, 213, 138, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px;
+  font-size: large;
 }
+
+/* delete later if link colors are the same */
+nav > a  {
+  color: rgb(128, 151, 220);
+}
+
+#show-page {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+}
+
+#add-review-form {
+  font-style: italic;
+  width: 60vh;
+  margin: 30px;
+  display: flex;
+  align-items: self-end;
+  background-color: rgba(231, 213, 138, 0.6);
+  padding: 15px;
+}
+
+#new-form {
+  display: flex;
+  flex-direction: column;
+  width: 30vh;
+  /* font-size: 50px; */
+}
+
+#remove {
+  /* color:red; */
+  background-color:rgb(199, 31, 31);
+  padding: 10px;
+  font-style: italic;
+}
+
+#rating {
+  padding: 5px;
+  font-size: 17px;
+}
+
+#review-btn {
+  padding: 5px;
+  font-size: 17px;
+}
+
+#add-brewery-btn {
+  padding: 5px;
+  font-size: 17px;
+}
+
+h2 {
+  color: #14627c;
+}
+

@@ -2,23 +2,22 @@
 
 <form id="new-form" action="/breweries" method="POST">
   <label>Brewery Name:</label>
-  <input type="text" name="name">
+  <input type="text" name="name">&nbsp;
   <label>City, State:</label>
-  <input type="text" name="location">
+  <input type="text" name="location">&nbsp;
   <label>Dog Friendly?:</label>
-  select
   <select name="dogFriendly">
     <option value="Yes">Yes</option>
     <option value="No">No</option>
-  </select>
+  </select>&nbsp;
   <label>Ambience:</label>
   <select name="ambience">
     <option value="Chill">Chill</option>
     <option value="Uplifting">Uplifting</option>
     <option value="Classy">Classy</option>
   </select>
-
-  <input type="submit" value="Add Brewery">
+  &nbsp;
+  <input type="submit" value="Add Brewery" id="add-brewery-btn">
 </form>
 
 <%- include('../partials/footer') %>

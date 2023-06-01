@@ -1,40 +1,39 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    
-    <div>Brewery Name: </div>
-    <div><%= brewery.name %></div>
-    <div>City, State: </div>
-    <div><%= brewery.location %></div>
-    <div>Dog Friendly?: </div>
-    <div><%= brewery.dogFriendly %></div>
-    <div>Ambience: </div>
+    <div><strong>Brewery Name:</strong></div>
+    <div><%= brewery.name %></div>&nbsp;
+    <div><strong>City, State:</strong></div>
+    <div><%= brewery.location %></div>&nbsp;
+    <div><strong>Dog Friendly?:</strong></div>
+    <div><%= brewery.dogFriendly %></div>&nbsp;
+    <div><strong>Ambience:</strong></div>
     <div><%= brewery.ambience %></div>
 </section>
 <section>
-    <h2>Reviews</h2>
+    <h2>Add Reviews</h2>
     <form id="add-review-form" method="POST" action="/breweries/<%= brewery._id%>/reviews">
-        <label>Review:</label>
-        <textarea name="content"></textarea>
-        <label>Rating:</label>
-        <select name="rating">
+        <label>Review:</label>&nbsp;&nbsp;
+        <textarea name="content"></textarea>&nbsp;&nbsp;
+        <label>Rating:</label>&nbsp;&nbsp;
+        <select name="rating" id="rating">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5" selected>5</option>
-        </select>
-        <input type="submit" value="Add Review">
+        </select>&nbsp;&nbsp;
+        <input type="submit" value="Add Review" id="review-btn">
         
     </form>
     <% if(brewery.reviews.length) { %>
         <table>
             <thead>
               <tr>
-                <th>User</th>
-                <th>Date</th>
-                <th>Review</th>
-                <th>Rating</th>
+                <th>User&nbsp;&nbsp;</th>
+                <th>Date&nbsp;&nbsp;</th>
+                <th>Review&nbsp;&nbsp;</th>
+                <th>Rating&nbsp;&nbsp;</th>
                 <th>Actions</th>
                 <th></th>
               </tr>
@@ -44,10 +43,10 @@
                 <% brewery.reviews.forEach(function(r) { %>
                     <% total += r.rating %>
                 <tr>
-                    <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
-                    <td><%= r.createdAt.toLocaleDateString() %></td>
-                    <td><%= r.content %></td>
-                    <td><%= r.rating %></td>
+                    <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" >&nbsp;&nbsp;<%= r.userName %>&nbsp;&nbsp;</td>
+                    <td><%= r.createdAt.toLocaleDateString() %>&nbsp;&nbsp;</td>
+                    <td><%= r.content %>&nbsp;&nbsp;</td>
+                    <td><%= r.rating %>&nbsp;&nbsp;</td>
                     <td>
                         <div class="btn-group">
                             <% if (user?._id.equals(r.user)) { %>

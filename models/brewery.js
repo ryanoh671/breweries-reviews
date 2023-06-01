@@ -2,6 +2,18 @@ const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
+const checkinSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User', 
+        required: true
+    },
+    userName: String,
+    userAvatar: String
+}, {
+    timestamps: true,
+});
+
 const reviewSchema = new Schema({
     content: {
         type: String, 
@@ -38,6 +50,7 @@ const brewerySchema = new Schema({
         required: true
     },
     reviews: [reviewSchema],
+    checkins: [checkinSchema],
     user: { type: Schema.Types.ObjectId, ref: 'User'},
     userName: String,
     userAvatar: String

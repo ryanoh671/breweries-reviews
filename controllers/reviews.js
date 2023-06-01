@@ -26,7 +26,7 @@ async function edit(req, res) {
     const brewery = await Brewery.findOne({'reviews._id': req.params.id});
     const review = brewery.reviews.id(req.params.id);
     
-    res.render(`reviews/edit`, { review, title: 'Reviews edit page'});
+    res.render(`reviews/edit`, { review, title: 'Edit Review'});
 }
 
 async function update(req, res) {
