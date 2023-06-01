@@ -1,19 +1,20 @@
 const Brewery = require('../models/brewery');
 
 module.exports = {
-  new: newCheckins, 
+  new: newCheckins,
   create
 };
 
 
-function newCheckins(req, res) {
+async function newCheckins(req, res) {
     // render an error msg if create action fails
+    // const brewery = await Brewery.findById(req.params.id);
     res.render('checkins/new', { title: 'Confirm Check-In', errorMsg: '' } );
 }
 
 async function create(req, res) {
     const brewery = await Brewery.findById(req.params.id);
-    
+    console.log(brewery);
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;

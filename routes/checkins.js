@@ -6,7 +6,7 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET /checkins/new
 router.get('/checkins/new', ensureLoggedIn, checkinsCtrl.new);
 
-// POST /breweries/:id/checkins
+// POST /checkins
 router.post('/breweries/:id/checkins', ensureLoggedIn, checkinsCtrl.create);
 
 module.exports = router;
