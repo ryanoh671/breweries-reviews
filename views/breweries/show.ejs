@@ -68,6 +68,29 @@
     <% } %> 
 </section>
 
+<% if(brewery.checkins.length) { %>
+
+    <table id="checkin-table">
+        <h3>Checkin History</h3>
+        <thead>
+          <tr>
+            <th>Check-In History</th>
+          </tr>
+        </thead>
+   
+    <% brewery.checkins.forEach(function(c) { %>
+    <tr>
+        <td class="checkin-user">
+            <img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" >
+            <%= c.userName %>&nbsp;
+        </td>
+        <td><%= c.createdAt.toLocaleString() %>&nbsp;</td>
+    </tr>
+    <% }) %>
+    </table>    
+<% } else { %>
+    <h5>No Checkins Yet</h5>
+<% } %>
 
 
 

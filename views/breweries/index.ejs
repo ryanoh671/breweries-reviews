@@ -15,7 +15,7 @@
           <td><%= brewery.name %></td>
           <td><%= brewery.location %></td>
           <td><a href="/breweries/<%= brewery._id %>">DETAILS</a></td>
-          <td><a href="/checkins/new">Check-In</a></td>
+          <td><a href="/breweries/<%= brewery._id%>/checkins/new">Check-In</a></td>
           <td>
             <% if (user && brewery.user.equals(user._id)) { %>
             <form action="/breweries/<%= brewery._id %>?_method=DELETE" method="POST">

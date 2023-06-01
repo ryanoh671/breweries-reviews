@@ -8,8 +8,8 @@ module.exports = {
 
 async function newCheckins(req, res) {
     // render an error msg if create action fails
-    // const brewery = await Brewery.findById(req.params.id);
-    res.render('checkins/new', { title: 'Confirm Check-In', errorMsg: '' } );
+    const brewery = await Brewery.findById(req.params.id);
+    res.render('checkins/new', { brewery, title: 'Confirm Check-In', errorMsg: '' } );
 }
 
 async function create(req, res) {

@@ -19,6 +19,7 @@ a {
 
 img {
   height: 30px;
+  width: 30px;
   border-radius: 15px;
 
 }
@@ -98,3 +99,7 @@ h2 {
   color: #14627c;
 }
 
+#checkin-table {
+  margin: 40px;
+  background-color: rgba(231, 213, 138, 0.6);
+}

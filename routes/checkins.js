@@ -4,7 +4,7 @@ var checkinsCtrl = require('../controllers/checkins');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // GET /checkins/new
-router.get('/checkins/new', ensureLoggedIn, checkinsCtrl.new);
+router.get('/breweries/:id/checkins/new', ensureLoggedIn, checkinsCtrl.new);
 
 // POST /checkins
 router.post('/breweries/:id/checkins', ensureLoggedIn, checkinsCtrl.create);
