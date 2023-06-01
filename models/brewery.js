@@ -9,7 +9,10 @@ const checkinSchema = new Schema({
         required: true
     },
     userName: String,
-    userAvatar: String
+    userAvatar: String,
+    imgLink: {
+        type: String
+    }
 }, {
     timestamps: true,
 });

@@ -2,8 +2,11 @@
 
 
     <form id="checkin-form" action="/breweries/<%= brewery._id %>/checkins" method="POST">
-        <button type="submit" action="/breweries/<%= brewery._id%>/checkins">Yes</button>
-        <a href="/breweries">no</a>
+        <textarea name="imgLink">Add Image Link</textarea>
+        <section>
+            <button id="checkin-btn" type="submit" action="/breweries/<%= brewery._id%>/checkins">Yes</button>
+            <a href="/breweries">No</a>
+        </section>            
     </form>
 
 
