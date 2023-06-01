@@ -39,9 +39,8 @@ async function show(req, res) {
 }
 
 async function deleteBrewery(req, res) {
-    const brewery = await Brewery.findOne({'brewery._id' : req.params.id, 'brewery.user' : req.user._id});
-    if (!brewery) return res.redirect(`/breweries/${brewery._id}`);
-    brewery.remove(req.params.id);
-    await brewery.save();
-    res.redirect(`/breweries`);
-}
+    await Brewery.findOneAndDelete(
+        {_id: req.params.id, user: req.user._id}
+    );
+    res.redirect('/breweries');
+    }

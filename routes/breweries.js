@@ -1,21 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var breweriesCtrl = require('../controllers/breweries');
-// const ensureLoggedIn = require('../config/ensureLoggedIn');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // GET /breweries
 router.get('/', breweriesCtrl.index);
 
 // GET /breweries/new
-router.get('/new', breweriesCtrl.new);
+router.get('/new', ensureLoggedIn, breweriesCtrl.new);
 
 // POST /breweries
-router.post('/', breweriesCtrl.create);
+router.post('/', ensureLoggedIn, breweriesCtrl.create);
 
 // GET /breweries/:id 
-router.get('/:id', breweriesCtrl.show);
+router.get('/:id', ensureLoggedIn, breweriesCtrl.show);
 
 // DELETE /breweries/:id
-router.delete('/:id', breweriesCtrl.delete);
+router.delete('/:id', ensureLoggedIn, breweriesCtrl.delete);
 
 module.exports = router;
