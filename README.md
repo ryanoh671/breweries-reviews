@@ -32,6 +32,7 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 # ⚛️ Getting Started
 
 <h3>📲 Instructions </h3>
+
 <details open>
 <summary>How to</summary>
 <ol>
@@ -41,8 +42,9 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 <li>Click the "Check In" link to check-in to the brewery</li>
 <li>View Check-In History to see all users that checked in</li>
 </ol>
+</details>
 
-<details>
+<details open>
 <h3>🔗 Links </h3>
 <summary>Trello Board</summary>   
 <a href="https://trello.com/b/3mxMmLXd/project-2">https://trello.com/b/3mxMmLXd/project-2</a>      
