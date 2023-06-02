@@ -61,3 +61,4 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 - Add ability to like images/reviews
 - Add ability to add a verified full address and be able to map to the brewery
 - Add additional CSS 
+- Make it primarily for mobile users, due to the check in feature. 
