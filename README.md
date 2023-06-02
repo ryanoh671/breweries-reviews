@@ -10,9 +10,9 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 
 # Screenshot
 
-<img src="https://i.imgur.com/jyOGFeK.png">
+<img src="https://i.imgur.com/6haFMdC.png">
 <img src="https://i.imgur.com/oknCWGG.png">
-<img src="https://i.imgur.com/vQu40va.png">
+<img src="https://i.imgur.com/FM3mmn8.png">
 
 # Technologies Used
 
@@ -38,9 +38,9 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 <ol>
 <li>Login with your google Account using link on the home page</li>
 <li>Click "Add Brewery" link to add any brewery</li>
-<li>Next, add a review and rating for that brewery</li>
-<li>Click the "Check In" link to check-in to the brewery</li>
-<li>View Check-In History to see all users that checked in</li>
+<li>Add a review and rating for any brewery</li>
+<li>Click the "Check In" link to check-in to any brewery</li>
+<li>View Check-In history and images uploaded</li>
 </ol>
 </details>
 
@@ -59,4 +59,5 @@ Brew Nation is where you can find all about the breweries near you. Search for y
 # ⏩ Next Steps   
 
 - Add ability to like images/reviews
-- Add ability to add address and map to the brewery
+- Add ability to add a verified full address and be able to map to the brewery
+- Add additional CSS 
