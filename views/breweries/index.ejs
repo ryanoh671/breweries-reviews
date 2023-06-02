@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
-  
+  <p id="drink-responsibly">YOU MUST BE OF LEGAL DRINKING AGE TO ENTER THIS SITE. YOUR INFORMATION WILL NOT BE STORED. PLEASE DRINK RESPONSIBLY.</p>
+<h4>Welcome to the webpage of Brewery Reviews. </br>Stay logged in to search breweries, add reviews, and check-in for a one-time free beer offer!</h4>
 <table id="list">
     <thead>
       <tr>
@@ -14,7 +15,7 @@
           <td class="brewery-user"><img alt="avatar" src="<%= brewery.userAvatar %>" referrerpolicy="no-referrer" >&nbsp;<%= brewery.userName %></td>
           <td><%= brewery.name %></td>
           <td><%= brewery.location %></td>
-          <td><a href="/breweries/<%= brewery._id %>">DETAILS</a></td>
+          <td><a href="/breweries/<%= brewery._id %>">Details</a></td>
           <td><a href="/breweries/<%= brewery._id%>/checkins/new">Check-In</a></td>
           <td>
             <% if (user && brewery.user.equals(user._id)) { %>

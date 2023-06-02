@@ -99,6 +99,12 @@ h2 {
   color: #14627c;
 }
 
+h4 {
+  color: rgb(77, 77, 156);
+  font-style: italic;
+  text-align: center;
+}
+
 #checkin-table {
   margin: 40px;
   background-color: rgba(231, 213, 138, 0.6);
@@ -120,4 +126,10 @@ h2 {
 #checkin-img {
   height: 100px;
   width: 100px;
+}
+
+#drink-responsibly {
+  font-size: 17px;
+  text-align: center;
+  color: rgb(223, 50, 24);
 }
