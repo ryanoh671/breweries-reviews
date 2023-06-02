@@ -108,6 +108,7 @@ h4 {
 #checkin-table {
   margin: 40px;
   background-color: rgba(231, 213, 138, 0.6);
+  text-align: center;
 }
 
 #checkin-btn {
